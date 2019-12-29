@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/styles';
 import { Grid } from '@material-ui/core';
 
 import {
+  Quill,
   Budget,
   TotalUsers,
   TasksProgress,
@@ -10,7 +11,7 @@ import {
   LatestSales,
   UsersByDevice,
   LatestProducts,
-  LatestOrders
+  LatestOrders,
 } from './components';
 
 const useStyles = makeStyles(theme => ({
@@ -71,7 +72,8 @@ const Dashboard = () => {
           xl={9}
           xs={12}
         >
-          <LatestSales />
+          {/* <LatestSales /> */}
+          <Quill />
         </Grid>
         <Grid
           item
@@ -80,7 +82,8 @@ const Dashboard = () => {
           xl={3}
           xs={12}
         >
-          <UsersByDevice />
+          <Quill />
+          {/* <UsersByDevice /> */}
         </Grid>
         <Grid
           item

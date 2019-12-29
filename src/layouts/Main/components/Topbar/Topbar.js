@@ -7,6 +7,7 @@ import { AppBar, Toolbar, Badge, Hidden, IconButton } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import NotificationsIcon from '@material-ui/icons/NotificationsOutlined';
 import InputIcon from '@material-ui/icons/Input';
+import CustomToolbar from '../../../../views/Dashboard/components/Quill/CustomToolbar'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -39,6 +40,7 @@ const Topbar = props => {
             src="/images/logos/logo--white.svg"
           />
         </RouterLink>
+        {/* <CustomToolbar /> */}
         <div className={classes.flexGrow} />
         <Hidden mdDown>
           <IconButton color="inherit">
