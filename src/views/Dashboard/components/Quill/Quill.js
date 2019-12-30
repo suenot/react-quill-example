@@ -4,7 +4,7 @@ import ReactQuill from 'react-quill'
 
 // import stylesheet
 // import 'quill/dist/quill.core.css'
-// import 'quill/dist/quill.snow.css'
+import 'quill/dist/quill.snow.css'
 // import 'react-quill/dist/snow.snow.css'; // ES6
 // import 'quill/dist/quill.bubble.css'
 import './bubble.css'
@@ -67,7 +67,8 @@ function insertStar () {
 class Editor extends React.Component {
   constructor (props) {
     super(props)
-    this.state = { editorHtml: '<h1>Hello</h1>', theme: 'bubble' }
+    this.state = { editorHtml: this.props.html, theme: this.props.theme }
+    // this.state = { editorHtml: '<h1>Hello</h1>', theme: 'bubble' }
     // this.handleChange = this.handleChange.bind(this)
   }
 
@@ -87,6 +88,19 @@ class Editor extends React.Component {
       }
     }
 
+    // if (this.props.id !== '') {
+    //   this.modules = {
+    //     toolbar: {
+    //       container: "#toolbar",
+    //       // handlers: {
+    //       //   "insertStar": insertStar,
+    //       // }
+    //     }
+    //   }
+    // } else {
+    
+    // }
+
     return (
       <div className="text-editor">
         {/* <CustomToolbar />
@@ -98,9 +112,9 @@ class Editor extends React.Component {
           modules={Editor.modules}
           formats={Editor.formats}
           bounds={'.app'}
-          // placeholder={this.props.placeholder}
+          placeholder={this.props.placeholder}
           onChange={this.handleChange}
-          placeholder={'Write something...'}
+          // placeholder={'Write something...'}
           // modules={Editor.modules}
         />
       </div>
@@ -120,6 +134,8 @@ class Editor extends React.Component {
 //     }
 //   }
 // }
+
+
 
 Editor.modules = {
   toolbar: [
@@ -154,6 +170,9 @@ Editor.formats = [
  */
 Editor.propTypes = {
   // placeholder: React.PropTypes.string,
+  // theme: React.PropTypes.string,
+  // id: React.PropTypes.string,
+  // html: React.PropTypes.string,
 }
 
 export default Editor

@@ -40,7 +40,7 @@ const Topbar = props => {
             src="/images/logos/logo--white.svg"
           />
         </RouterLink>
-        {/* <CustomToolbar /> */}
+        <CustomToolbar />
         <div className={classes.flexGrow} />
         <Hidden mdDown>
           <IconButton color="inherit">

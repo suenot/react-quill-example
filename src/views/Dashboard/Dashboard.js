@@ -73,7 +73,7 @@ const Dashboard = () => {
           xs={12}
         >
           {/* <LatestSales /> */}
-          <Quill />
+          <Quill placeholder='Placeholder for editor number 1' theme="bubble" id="" html="" />
         </Grid>
         <Grid
           item
@@ -82,7 +82,7 @@ const Dashboard = () => {
           xl={3}
           xs={12}
         >
-          <Quill />
+          <Quill placeholder='Placeholder' theme="snow" id="" html="<h1>Editor number 2</h1>" />
           {/* <UsersByDevice /> */}
         </Grid>
         <Grid
@@ -92,7 +92,8 @@ const Dashboard = () => {
           xl={3}
           xs={12}
         >
-          <LatestProducts />
+          <Quill placeholder='Placeholder' theme="snow" id="" html="<h1>Editor number 3</h1>" />
+          {/* <LatestProducts /> */}
         </Grid>
         <Grid
           item
