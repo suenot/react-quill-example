@@ -7,8 +7,8 @@ import ReactQuill from 'react-quill'
 import 'quill/dist/quill.snow.css'
 // import 'react-quill/dist/snow.snow.css'; // ES6
 // import 'quill/dist/quill.bubble.css'
-import './bubble.css'
-
+// import './bubble.css'
+// 
 
 // /*
 //  * Custom "star" icon for the toolbar using an Octicon
@@ -58,11 +58,11 @@ import './bubble.css'
  * Event handler to be attached using Quill toolbar module
  * http://quilljs.com/docs/modules/toolbar/
  */
-// function insertStar () {
-//   const cursorPosition = this.quill.getSelection().index
-//   this.quill.insertText(cursorPosition, "★")
-//   this.quill.setSelection(cursorPosition + 1)
-// }
+function insertStar () {
+  const cursorPosition = this.quill.getSelection().index
+  this.quill.insertText(cursorPosition, "★")
+  this.quill.setSelection(cursorPosition + 1)
+}
 
 class Editor extends React.Component {
   constructor (props) {
@@ -126,33 +126,33 @@ class Editor extends React.Component {
  * Quill modules to attach to editor
  * See http://quilljs.com/docs/modules/ for complete options
  */
-// Editor.modules = {
-//   toolbar: {
-//     container: "#toolbar",
-//     handlers: {
-//       "insertStar": insertStar,
-//     }
-//   }
-// }
-
-
-
 Editor.modules = {
-  toolbar: [
-    [{ 'header': '1'}, {'header': '2'}, { 'font': [] }],
-    [{size: []}],
-    ['bold', 'italic', 'underline', 'strike', 'blockquote'],
-    [{'list': 'ordered'}, {'list': 'bullet'}, 
-     {'indent': '-1'}, {'indent': '+1'}],
-    ['link', 'image', 'video'],
-    [{color: []}, {background:[]}],
-    ['clean']
-  ],
-  clipboard: {
-    // toggle to add extra line breaks when pasting HTML:
-    matchVisual: false,
+  toolbar: {
+    container: "#toolbar",
+    handlers: {
+      "insertStar": insertStar,
+    }
   }
 }
+
+
+
+// Editor.modules = {
+//   toolbar: [
+//     [{ 'header': '1'}, {'header': '2'}, { 'font': [] }],
+//     [{size: []}],
+//     ['bold', 'italic', 'underline', 'strike', 'blockquote'],
+//     [{'list': 'ordered'}, {'list': 'bullet'}, 
+//      {'indent': '-1'}, {'indent': '+1'}],
+//     ['link', 'image', 'video'],
+//     [{color: []}, {background:[]}],
+//     ['clean']
+//   ],
+//   clipboard: {
+//     // toggle to add extra line breaks when pasting HTML:
+//     matchVisual: false,
+//   }
+// }
 /* 
  * Quill editor formats
  * See https://quilljs.com/docs/formats/

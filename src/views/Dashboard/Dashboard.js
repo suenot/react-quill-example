@@ -4,6 +4,7 @@ import { Grid } from '@material-ui/core';
 
 import {
   Quill,
+  Quill2,
   Budget,
   TotalUsers,
   TasksProgress,
@@ -92,7 +93,7 @@ const Dashboard = () => {
           xl={3}
           xs={12}
         >
-          <Quill placeholder='Placeholder' theme="snow" id="" html="<h1>Editor number 3</h1>" />
+          <Quill2 placeholder='Placeholder' theme="snow" id="" html="<h1>Editor number 3</h1>" />
           {/* <LatestProducts /> */}
         </Grid>
         <Grid

@@ -7,3 +7,4 @@ export { default as TotalProfit } from './TotalProfit';
 export { default as TotalUsers } from './TotalUsers';
 export { default as UsersByDevice } from './UsersByDevice';
 export { default as Quill } from './Quill';
+export { default as Quill2 } from './Quill2';
